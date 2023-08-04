@@ -26,7 +26,7 @@
 
 <body>
 
-  <div class="r jcsa aic">
+  <div class="r jcc aic">
     <h1 class="bi bi-align-bottom"> Tower Game</h1>
     <div class="dropdown">
       <button class="drop-down" type="button" data-bs-toggle="dropdown" aria-expanded="false">
@@ -45,21 +45,22 @@
             type="button"><i class="bi bi-youtube icon"></i>YouTube</a></li>
       </ul>
     </div>
+    <a id="restart" href="./index.html">Restart</a>
   </div>
 
   <div class="r jcsa aic">
 
-    <div class="card-list tower cr aic" ondrop="drop(event, 'todo-list')" ondragover="allowDrop(event)">
-      <div class="block blue" draggable="true" id="task1"></div>
-      <div class="block red" draggable="true" id="task2"></div>
-      <div class="block green" draggable="true" id="task3"></div>
-      <div class="block yellow" draggable="true" id="task4"></div>
+    <div class="card-list tower cr aic" id="tower-1" ondrop="drop(event, 'todo-list')" ondragover="allowDrop(event)">
+      <div class="block blue" draggable="true" id="block-1" value="4"></div>
+      <div class="block red" draggable="true" id="block-2" value="3"></div>
+      <div class="block green" draggable="true" id="block-3" value="2"></div>
+      <div class="block yellow" draggable="true" id="block-4" value="1"></div>
     </div>
 
-    <div class="card-list tower cr aic" ondrop="drop(event, 'inprogress-list')" ondragover="allowDrop(event)"></div>
+    <div class="card-list tower cr aic" id="tower-2" ondrop="drop(event, 'inprogress-list')" ondragover="allowDrop(event)"></div>
 
 
-    <div class="card-list tower cr aic" ondrop="drop(event, 'done-list')" ondragover="allowDrop(event)"></div>
+    <div class="card-list tower cr aic" id="tower-3" ondrop="drop(event, 'done-list')" ondragover="allowDrop(event)"></div>
 
   </div>
   
