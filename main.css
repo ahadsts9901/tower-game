@@ -133,7 +133,7 @@ a,
   display: flex;
   flex-direction: column-reverse;
   padding: 0.5em !important;
-  gap: 1em;
+  /* gap: 1em; */
   width: 100%;
   height: fit-content;
 }
@@ -241,4 +241,14 @@ a,
   padding: 0.5em;
   color: #eee;
   background-color: #212121;
+}
+
+.instructions>a>div{
+  width: fit-content;
+  height: fit-content;
+  border-radius: 10px;
+  border: none;
+  padding: 0.5em;
+  color: #212121;
+  background-color: #21212100;
 }

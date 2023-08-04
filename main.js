@@ -88,3 +88,13 @@ let gameOver = false;
           });
     }
   }
+
+  document.getElementById('ins').addEventListener('click', ()=>{
+
+    Swal.fire({
+      title: 'How to play...?',
+      text: `You have to transfer all the blocks from tower 1 to tower 3, but you can't place larger block onto a smaller block`,
+      confirmButtonColor: "#212121",
+    })
+
+  })
