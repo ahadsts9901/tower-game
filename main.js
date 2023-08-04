@@ -1,11 +1,11 @@
 let gameOver = false;
 
   function load() {
-    var towers = document.querySelectorAll('.tower');
+    let towers = document.querySelectorAll('.tower');
 
     towers.forEach(function (tower) {
-      var blocks = tower.querySelectorAll('.block');
-      var lastBlock = blocks[blocks.length - 1];
+      let blocks = tower.querySelectorAll('.block');
+      let lastBlock = blocks[blocks.length - 1];
 
       blocks.forEach(function (block, index) {
         if (block === lastBlock && !gameOver) {
@@ -39,14 +39,14 @@ let gameOver = false;
 
   function drop(event) {
     event.preventDefault();
-    var cardId = event.dataTransfer.getData('text/plain');
-    var card = document.getElementById(cardId);
-    var targetList = event.target.closest('.card-list');
+    let cardId = event.dataTransfer.getData('text/plain');
+    let card = document.getElementById(cardId);
+    let targetList = event.target.closest('.card-list');
 
     if (targetList.children.length > 0) {
-      var lastBlock = targetList.lastElementChild;
-      var currentValue = parseInt(card.getAttribute('value'));
-      var lastValue = parseInt(lastBlock.getAttribute('value'));
+      let lastBlock = targetList.lastElementChild;
+      let currentValue = parseInt(card.getAttribute('value'));
+      let lastValue = parseInt(lastBlock.getAttribute('value'));
 
       if (currentValue > lastValue) {
         gameOver = true;
@@ -60,7 +60,7 @@ let gameOver = false;
           });
 
           // Reset draggable attribute for all blocks
-          var blocks = document.querySelectorAll('.block');
+          let blocks = document.querySelectorAll('.block');
           blocks.forEach(function (block) {
             block.setAttribute('draggable', 'false');
           });
@@ -82,5 +82,9 @@ let gameOver = false;
         showConfirmButton: false,
         timer: 2000,
       });
+      let blocks = document.querySelectorAll('.block');
+          blocks.forEach(function (block) {
+            block.setAttribute('draggable', 'false');
+          });
     }
   }

@@ -11,6 +11,11 @@
 /* body */
 
 body {
+  background-image: url(./assets/background.png);
+  background-repeat: repeat;
+  background-position: center;
+  background-size: 15em;
+  background-color: #eee!important;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -43,7 +48,7 @@ p {
 }
 
 .dropdown-menu.show {
-  background-color: #fff;
+  background-color: #eee;
   color: #000;
   border: 1px solid #000 !important;
 }
@@ -191,7 +196,7 @@ a,
 }
 
 .block {
-  background-color: #fff;
+  background-color: #eee;
   border: 1px solid #ccc;
   padding: 5px;
   margin-bottom: 5px;
@@ -234,6 +239,6 @@ a,
   border-radius: 10px;
   border: none;
   padding: 0.5em;
-  color: #fff;
+  color: #eee;
   background-color: #212121;
 }
