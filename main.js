@@ -1,4 +1,5 @@
 let gameOver = false;
+let moves = 0
 
   function load() {
     let towers = document.querySelectorAll('.tower');
@@ -71,14 +72,15 @@ let gameOver = false;
 
     targetList.appendChild(card);
     load();
+    moves++
+    document.getElementById('moves').innerText = moves;
 
-    // Check if all blocks are in tower 3
     let tower3 = document.querySelector('#tower-3');
     if (tower3.children.length === 4) {
       Swal.fire({
         icon: 'success',
         title: 'You Win',
-        text: 'You finished the game',
+        text: `You finished the game in ${moves} moves`,
         showConfirmButton: false,
         timer: 2000,
       });
